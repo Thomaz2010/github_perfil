@@ -14,7 +14,7 @@ const ReposList= ({ nomeUsuario }) => {
             .then(res => res.json())  
             .then(resJson => {
                 setRepos(resJson);
-            })
+            }, 3000)
             .catch(error => console.error("Erro ao carregar os repositórios:", error));
     }, [nomeUsuario]);
 
